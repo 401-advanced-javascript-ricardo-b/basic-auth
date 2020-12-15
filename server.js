@@ -6,11 +6,11 @@ const router = require('./auth/auth-route');
 const cors = require('cors')
 
 //middleware
-app.use(cors);
+app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(router);
-require('dotenv').config();
+
 
 module.exports = {
   server: app,

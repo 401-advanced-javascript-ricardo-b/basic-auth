@@ -19,17 +19,22 @@ async function basicAuth(req, res, next){
     3. Either we're valid or we throw an error
   */
   try {
-    const user = await Users.findOne({ username })
-    const valid = await bcrypt.compare(password, user.password);
-    if (valid) {
-      res.status(200).json(user);
-      next();
-    }
-    else {
-      next(error)
+
+    req.user = await Users.authenticateBasic(username, password)
+
+    // const user = await Users.findOne({ username })
+    // const valid = await bcrypt.compare(password, user.password);
+    // if (valid) {
+    //   res.status(200).json(user);
+    //   next();
+    // }
+    // else {
+    //   next(error)
      
-    }
+    // }
   } catch (error) { res.status(403).send("Invalid Login"); }
+  
+  next();
 }
 
 module.exports = basicAuth;

@@ -6,9 +6,9 @@
 
 ### Links and Resources
 
-- [ci/cd]() (GitHub Actions)
-- [Heroku Production Deployment]()
-- [Pull request]()
+- [ci/cd](https://github.com/401-advanced-javascript-ricardo-b/basic-auth/actions/new) (GitHub Actions)
+- [Heroku Production Deployment](https://ricardob-basic-auth.herokuapp.com/signup)
+- [Pull request](https://github.com/401-advanced-javascript-ricardo-b/basic-auth/pull/1)
 
 ### Setup
 
